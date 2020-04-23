@@ -76,10 +76,11 @@ public class DepartmentFormController implements Initializable{
 			
 		} catch (DbException e) {
 			Alerts.showAlert("Error saving object", null, e.getMessage(), AlertType.ERROR);
+			
 		} catch (ValidationException e) {
 			setErrorMessages(e.getErrors());
-		}
-		
+			
+		}		
 	}
 	
 	private void notifyDataChengeListeners() {
